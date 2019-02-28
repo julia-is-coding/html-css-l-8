@@ -1,0 +1,52 @@
+/* Базовый синтаксис:
+
+@media not|only mediatype and (expressions) {
+    Css-code;
+}
+
+Типы:
+
+- all;
+- print;
+- screen;
+- speech. */
+
+/* на печатном устройстве цвет текста будет красным: */
+
+@media print {
+    body {
+        color: red;
+    }
+    .box {
+        display: none;
+    }
+}
+
+@media screen {
+    body {
+        color: green;
+    }
+}
+
+.box {
+    background: orange;
+    width: 200px;
+    height: 200px;
+}
+/* @media all and (min-width: 500px) { --> для всех устройств минимальной ширины от 500 px */
+    /* p {
+        font-size: 2rem;
+    }
+    .box {
+        height: 50px;
+    }
+} */ 
+
+@media (min-width: 500px) and (max-width: 800px) { /* от 500 до 800 px будет работать */
+    p {
+        font-size: 2rem;
+    }
+    .box {
+        height: 50px;
+    }
+}
